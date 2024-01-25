@@ -339,7 +339,7 @@ def mode_loss(dm_in, photon_name, loss, dim, ideal=False, **kw):
     dm_loss = link_loss * dm_in * link_loss.dag()
     dm_out = dm_loss.ptrace(["loss"], keep=False)
 
-    dc_rate = 0.1
+    dc_rate = 0.01
     a = nq.name(qt.destroy(dim), photon_name)
 
     # Photon is added to the designated mode.
